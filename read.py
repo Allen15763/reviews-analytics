@@ -15,3 +15,22 @@ for avg in data:
 	sum_len += len(avg)
 
 print('每筆留言平均長度為', round(sum_len/len(data),0), '字')
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '筆留言長度小於100') #一英文字=一長度
+print(new[0])
+print(new[1])
+
+good = []
+for g in data:
+	if 'good' in g:
+		good.append(g)
+# 補充 'a' in 'abc' -> True
+# 補充 '1' in 'abc' -> False
+
+print('一共有', len(good), '筆資料包含good')
+print(good[0])
+print(good[1])
